@@ -1,0 +1,13 @@
+name: common_marker
+version: 0.0.1
+
+development_dependencies:
+  crystal_lib:
+    github: crystal-lang/crystal_lib
+
+authors:
+  - Anton Maminov <anton.linux@gmail.com>
+
+crystal: 0.29.0
+
+license: MIT

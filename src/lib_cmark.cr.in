@@ -1,0 +1,33 @@
+@[Include("cmark-gfm.h", flags: "-Iext")]
+@[Include("cmark-gfm-extension_api.h", flags: "-Iext")]
+@[Include("cmark-gfm-core-extensions.h", flags: "-Iext")]
+
+@[Link(ldflags: "-L#{__DIR__}/../ext -lcmark-gfm -lcmark-gfm-extensions")]
+lib LibCmark
+  fun cmark_parser_new = cmark_parser_new
+  fun cmark_parser_get_syntax_extensions = cmark_parser_get_syntax_extensions
+  fun node_free = cmark_node_free
+  fun cmark_find_syntax_extension = cmark_find_syntax_extension
+  fun cmark_parser_attach_syntax_extension = cmark_parser_attach_syntax_extension
+  fun cmark_gfm_core_extensions_ensure_registered = cmark_gfm_core_extensions_ensure_registered
+  fun parser_feed = cmark_parser_feed
+  fun parser_finish = cmark_parser_finish
+  fun render_html = cmark_render_html
+
+  OPT_DEFAULT = CMARK_OPT_DEFAULT
+  OPT_SOURCEPOS = CMARK_OPT_SOURCEPOS
+  OPT_HARDBREAKS = CMARK_OPT_HARDBREAKS
+  OPT_NORMALIZE = CMARK_OPT_NORMALIZE
+  OPT_UNSAFE = CMARK_OPT_UNSAFE
+  OPT_NOBREAKS = CMARK_OPT_NOBREAKS
+  OPT_VALIDATE_UTF8 = CMARK_OPT_VALIDATE_UTF8
+  OPT_SMART = CMARK_OPT_SMART
+  OPT_GITHUB_PRE_LANG = CMARK_OPT_GITHUB_PRE_LANG
+  OPT_LIBERAL_HTML_TAG = CMARK_OPT_LIBERAL_HTML_TAG
+  OPT_FOOTNOTES = CMARK_OPT_FOOTNOTES
+  OPT_STRIKETHROUGH_DOUBLE_TILDE = CMARK_OPT_STRIKETHROUGH_DOUBLE_TILDE
+  OPT_TABLE_PREFER_STYLE_ATTRIBUTES = CMARK_OPT_TABLE_PREFER_STYLE_ATTRIBUTES
+
+  VERSION = CMARK_GFM_VERSION
+  VERSION_STRING = CMARK_GFM_VERSION_STRING
+end
