@@ -2,7 +2,7 @@
 @[Include("cmark-gfm-extension_api.h", flags: "-Iext")]
 @[Include("cmark-gfm-core-extensions.h", flags: "-Iext")]
 
-@[Link(ldflags: "\#{__DIR__}/../ext/*.a -lcmark-gfm -lcmark-gfm-extensions")]
+@[Link(ldflags: "\#{__DIR__}/../ext/*.a")]
 lib LibCmark
   fun cmark_parser_new = cmark_parser_new
   fun cmark_parser_get_syntax_extensions = cmark_parser_get_syntax_extensions
