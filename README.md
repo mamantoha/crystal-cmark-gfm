@@ -1,5 +1,7 @@
 # CommonMarker
 
+[![Build Status](https://travis-ci.org/mamantoha/crystal-cmark-gfm.svg?branch=master)](https://travis-ci.org/mamantoha/crystal-cmark-gfm)
+
 Simple [Crystal](https://crystal-lang.org/) wrapper for [cmark-gfm](https://github.com/github/cmark-gfm), GitHub's fork of the reference parser for CommonMark.
 
 This binding is statically linked with a specific version of cmark-gfm.
