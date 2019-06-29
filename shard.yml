@@ -5,6 +5,9 @@ development_dependencies:
   crystal_lib:
     github: crystal-lang/crystal_lib
 
+scripts:
+  postinstall: cd ext && make
+
 authors:
   - Anton Maminov <anton.linux@gmail.com>
 
