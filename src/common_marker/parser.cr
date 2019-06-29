@@ -34,6 +34,10 @@ class Parser
     true
   end
 
+  def add_extensions(extensions = [] of String)
+    extensions.each { |name| add_extension(name) }
+  end
+
   # Finish parsing and return a pointer to a tree of nodes.
   def finish
     LibCmark.parser_finish(parser)

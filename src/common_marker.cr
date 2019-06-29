@@ -12,14 +12,11 @@ class CommonMarker
     parse_options!(options)
 
     @parser = Parser.new(@options)
+    @parser.add_extensions(@extensions)
   end
 
   # Parses a Markdown string into an HTML string.
   def to_html : String
-    @extensions.each do |name|
-      parser.add_extension(name)
-    end
-
     extensions = parser.get_extensions
 
     parser.parse!(text)

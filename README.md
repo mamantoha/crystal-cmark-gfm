@@ -1,6 +1,8 @@
 # CommonMarker
 
 [![Build Status](https://travis-ci.org/mamantoha/crystal-cmark-gfm.svg?branch=master)](https://travis-ci.org/mamantoha/crystal-cmark-gfm)
+[![GitHub release](https://img.shields.io/github/release/mamantoha/crystal-cmark-gfm.svg)](https://github.com/mamantoha/crystal-cmark-gfm/releases)
+[![License](https://img.shields.io/github/license/mamantoha/crystal-cmark-gfm.svg)](https://github.com/mamantoha/crystal-cmark-gfm/blob/master/LICENSE)
 
 Simple [Crystal](https://crystal-lang.org/) wrapper for [cmark-gfm](https://github.com/github/cmark-gfm), GitHub's fork of the reference parser for CommonMark.
 
