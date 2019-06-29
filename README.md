@@ -46,12 +46,6 @@ The available extensions are:
 
 ## Development
 
-If you want to build it yourself, make sure you've also cloned submodules:
-
-```console
-git submodule update --init --recursive
-```
-
 ```console
 cd ext && make && cd ..
 ```
