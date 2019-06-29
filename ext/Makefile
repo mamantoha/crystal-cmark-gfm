@@ -13,7 +13,7 @@ libcmark-gfm.a: $(CMARK) $(SOURCES)
 	cp $(CMARK)/build/extensions/*.a .
 
 $(CMARK):
-	git clone https://github.com/github/cmark-gfm.git
+	git submodule update --init --recursive
 
 clean:
 	rm -rf *.h
