@@ -24,7 +24,9 @@ This binding is statically linked with a specific version of cmark-gfm.
 require "common_marker"
 
 text = File.read("README.md")
-md = CommonMarker.new(text, ["unsafe"], ["table"])
+extensions = ["table", "strikethrough", "autolink", "tagfilter", "tasklist"]
+options = ["unsafe"]
+md = CommonMarker.new(text, options: options, extensions: extensions)
 html = md.to_html
 ```
 
@@ -34,22 +36,21 @@ html = md.to_html
 
 The available extensions are:
 
-- `:table` - This provides support for tables.
-- `:strikethrough` - This provides support for strikethroughs.
-- `:autolink` - This provides support for automatically converting URLs to anchor tags.
-- `:tagfilter` - This escapes [several "unsafe" HTML tags](https://github.github.com/gfm/#disallowed-raw-html-extension-), causing them to not have any effect.
+- `table` - This provides support for tables.
+- `strikethrough` - This provides support for strikethroughs.
+- `autolink` - This provides support for automatically converting URLs to anchor tags.
+- `tagfilter` - This escapes [several "unsafe" HTML tags](https://github.github.com/gfm/#disallowed-raw-html-extension-), causing them to not have any effect.
+- `tasklist` - This provides support for task list items.
 
 ## Development
 
 ```console
-sudo apt install libcmark-gfm-dev libcmark-gfm-extensions-dev
+cd ext && make && cd ..
 ```
 
 ```console
 crystal ./lib/crystal_lib/src/main.cr -- src/lib_cmark.cr.in > ./src/lib_cmark.cr
 ```
-
-TODO: Write development instructions here
 
 ## Contributing
 

@@ -9,7 +9,7 @@ scripts:
   postinstall: cd ext && make
 
 authors:
-  - Anton Maminov <anton.linux@gmail.com>
+  - Anton Maminov <anton.maminov@gmail.com>
 
 crystal: 0.29.0
 
