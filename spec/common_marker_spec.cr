@@ -10,7 +10,7 @@ describe CommonMarker do
       expect_raises Exception, "Unknown extension pipeline" do
         text = "_Hello_ **world**"
         extensions = ["pipeline"]
-        md = CommonMarker.new(text, extensions: extensions)
+        CommonMarker.new(text, extensions: extensions)
       end
     end
   end

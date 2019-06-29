@@ -4,6 +4,8 @@ version: 0.1.0
 development_dependencies:
   crystal_lib:
     github: crystal-lang/crystal_lib
+  ameba:
+    github: veelenga/ameba
 
 scripts:
   postinstall: cd ext && make
