@@ -1,6 +1,12 @@
+dist: xenial
 language: crystal
+crystal:
+  - latest
+  - nightly
 
-# Uncomment the following if you'd like Travis to run specs and check code formatting
-# script:
-#   - crystal spec
-#   - crystal tool format --check
+before_script:
+  - cd ext && make && cd -
+
+script:
+  - crystal spec
+  - crystal tool format --check

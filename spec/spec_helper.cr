@@ -1,2 +1,2 @@
 require "spec"
-require "../src/commonmarker"
+require "../src/common_marker"

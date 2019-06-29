@@ -5,6 +5,8 @@ class CommonMarker
   getter text : String
   getter parser : Parser
 
+  CMARK_VERSION = LibCmark::VERSION_STRING
+
   def initialize(@text, options = [] of String, @extensions = [] of String)
     @options = LibCmark::OPT_DEFAULT
     parse_options!(options)
