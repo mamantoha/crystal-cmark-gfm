@@ -1,11 +1,11 @@
 name: common_marker
-version: 0.1.0
+version: 0.2.0
 
 development_dependencies:
   crystal_lib:
     github: crystal-lang/crystal_lib
   ameba:
-    github: veelenga/ameba
+    github: crystal-ameba/ameba
 
 scripts:
   postinstall: cd ext && make
@@ -13,6 +13,6 @@ scripts:
 authors:
   - Anton Maminov <anton.maminov@gmail.com>
 
-crystal: 0.29.0
+crystal: 0.30.0
 
 license: MIT
