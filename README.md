@@ -4,7 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/mamantoha/crystal-cmark-gfm.svg)](https://github.com/mamantoha/crystal-cmark-gfm/releases)
 [![License](https://img.shields.io/github/license/mamantoha/crystal-cmark-gfm.svg)](https://github.com/mamantoha/crystal-cmark-gfm/blob/master/LICENSE)
 
-Simple [Crystal](https://crystal-lang.org/) wrapper for [cmark-gfm](https://github.com/github/cmark-gfm), GitHub's fork of the reference parser for CommonMark.
+[Crystal](https://crystal-lang.org/) wrapper for [cmark-gfm](https://github.com/github/cmark-gfm), GitHub's fork of the reference parser for CommonMark.
 
 This binding is statically linked with a specific version of cmark-gfm.
 
