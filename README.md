@@ -8,6 +8,10 @@
 
 This binding is statically linked with a specific version of cmark-gfm.
 
+cmark-gfm supports simple parsing and rendering of markdown content.
+
+If you want more features please check [cr-cmark-gfm](https://github.com/amauryt/cr-cmark-gfm).
+
 ## Installation
 
 1. Add the dependency to your `shard.yml`:
