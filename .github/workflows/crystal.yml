@@ -1,0 +1,63 @@
+name: Crystal CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  check_format:
+    runs-on: ubuntu-20.04
+    container:
+      image: crystallang/crystal
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: shards install --ignore-crystal-version
+      - name: Check format
+        run: crystal tool format --check
+  check_ameba:
+    runs-on: ubuntu-20.04
+    container:
+      image: crystallang/crystal
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: shards install --ignore-crystal-version
+      - name: Check ameba
+        run: ./bin/ameba
+  test_latest:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install apt dependencies
+        run: |
+          sudo apt install gcc pkg-config git tzdata libpcre3-dev libevent-dev libyaml-dev libgmp-dev libssl-dev libxml2-dev libcmark-gfm-dev
+      - name: Install Crystal
+        run: |
+          sudo snap install crystal --classic
+      - name: Install dependencies
+        run: shards install --ignore-crystal-version
+      - name: Build dependencies
+        run: cd ext && make && cd -
+      - name: Run tests
+        run: crystal spec
+  test_nightly:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install apt dependencies
+        run: |
+          sudo apt install gcc pkg-config git tzdata libpcre3-dev libevent-dev libyaml-dev libgmp-dev libssl-dev libxml2-dev libcmark-gfm-dev
+      - name: Install Crystal
+        run: |
+          sudo snap install crystal --edge --classic
+      - name: Install dependencies
+        run: shards install --ignore-crystal-version
+      - name: Build dependencies
+        run: cd ext && make && cd -
+      - name: Run tests
+        run: crystal spec

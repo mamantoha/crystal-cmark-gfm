@@ -1,6 +1,6 @@
 # CommonMarker
 
-[![Build Status](https://travis-ci.org/mamantoha/crystal-cmark-gfm.svg?branch=master)](https://travis-ci.org/mamantoha/crystal-cmark-gfm)
+![Crystal CI](https://github.com/mamantoha/crystal-cmark-gfm/workflows/Crystal%20CI/badge.svg)
 [![GitHub release](https://img.shields.io/github/release/mamantoha/crystal-cmark-gfm.svg)](https://github.com/mamantoha/crystal-cmark-gfm/releases)
 [![License](https://img.shields.io/github/license/mamantoha/crystal-cmark-gfm.svg)](https://github.com/mamantoha/crystal-cmark-gfm/blob/master/LICENSE)
 
