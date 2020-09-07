@@ -41,6 +41,8 @@ jobs:
           sudo snap install crystal --classic
       - name: Install dependencies
         run: shards install --ignore-crystal-version
+      - name: Build dependencies
+        run: cd ext && make && cd -
       - name: Run tests
         run: crystal spec
   test_nightly:
