@@ -38,7 +38,7 @@ jobs:
           sudo apt install libcmark-gfm-dev
       - name: Install Crystal
         run: |
-          sudo snap install crystal
+          sudo snap install crystal --classic
       - name: Install dependencies
         run: shards install --ignore-crystal-version
       - name: Run tests
