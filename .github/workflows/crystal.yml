@@ -39,7 +39,7 @@ jobs:
       - name: Install Crystal
         run: |
           sudo snap install crystal
-     - name: Install dependencies
+      - name: Install dependencies
         run: shards install --ignore-crystal-version
       - name: Run tests
         run: crystal spec
