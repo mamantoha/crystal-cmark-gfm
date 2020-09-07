@@ -20,7 +20,7 @@ jobs:
       - name: Check format
         run: crystal tool format --check
   check_ameba:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     container:
       image: crystallang/crystal
     steps:
@@ -30,7 +30,7 @@ jobs:
       - name: Check ameba
         run: ./bin/ameba
   test_latest:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     container:
       image: crystallang/crystal
     steps:
@@ -42,7 +42,7 @@ jobs:
       - name: Run tests
         run: crystal spec
   test_nightly:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     container:
       image: crystallang/crystal:nightly
     steps:
