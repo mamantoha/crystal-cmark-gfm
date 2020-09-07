@@ -33,13 +33,13 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - name: Install Crystal
-        run: snap install crystal
-      - name: Install cmark-gfm
+      - name: Install apt dependencies
         run: |
-          apt update
-          apt install libcmark-gfm-dev
-      - name: Install dependencies
+          sudo apt install libcmark-gfm-dev
+      - name: Install Crystal
+        run: |
+          sudo snap install crystal
+     - name: Install dependencies
         run: shards install --ignore-crystal-version
       - name: Run tests
         run: crystal spec
