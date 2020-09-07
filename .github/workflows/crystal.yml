@@ -36,7 +36,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install cmark-gfm
-        run: apt install cmark-gfm libcmark-gfm-dev
+        run: apt install libcmark-gfm-dev
       - name: Install dependencies
         run: shards install --ignore-crystal-version
       - name: Run tests
@@ -48,7 +48,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install cmark-gfm
-        run: apt install cmark-gfm libcmark-gfm-dev
+        run: apt install libcmark-gfm-dev
       - name: Install dependencies
         run: shards install --ignore-crystal-version
       - name: Run tests
