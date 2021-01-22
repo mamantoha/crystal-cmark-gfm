@@ -6,6 +6,7 @@ development_dependencies:
     github: crystal-lang/crystal_lib
   ameba:
     github: crystal-ameba/ameba
+    branch: develop
 
 scripts:
   postinstall: cd ext && make
