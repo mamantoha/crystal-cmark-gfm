@@ -55,7 +55,7 @@ cd ext && make && cd ..
 ```
 
 ```console
-crystal ./lib/crystal_lib/src/main.cr -- src/lib_cmark.cr.in > ./src/lib_cmark.cr
+crystal ./lib/crystal_lib/src/main.cr src/lib_cmark.cr.in > ./src/lib_cmark.cr
 ```
 
 ## Contributing
