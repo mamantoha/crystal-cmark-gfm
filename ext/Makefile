@@ -17,7 +17,6 @@ $(CMARK):
 
 clean:
 	rm -rf cmark-gfm
-	rm -rf *.h
 
 distclean: clean
-	rm -rf *.a
+	rm -rf *.a, *.h
