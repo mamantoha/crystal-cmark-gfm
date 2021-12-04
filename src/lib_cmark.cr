@@ -1,7 +1,4 @@
-@[Link(ldflags: "#{__DIR__}/../ext/*.a")]
-
-
-@[Link(ldflags: "-L#{__DIR__}/../ext -lcmark-gfm -lcmark-gfm-extensions")]
+@[Link(ldflags: "-L#{__DIR__}/../ext/*.a -lcmark-gfm -lcmark-gfm-extensions")]
 lib LibCmark
   type CmarkParser = Void*
   fun cmark_parser_new(options : LibC::Int) : CmarkParser
