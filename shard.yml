@@ -1,5 +1,5 @@
 name: common_marker
-version: 0.6.0
+version: 0.7.0
 
 development_dependencies:
   crystal_lib:
@@ -13,6 +13,6 @@ scripts:
 authors:
   - Anton Maminov <anton.maminov@gmail.com>
 
-crystal: ">= 0.36.0"
+crystal: ">= 1.0.0"
 
 license: MIT
