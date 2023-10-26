@@ -1,6 +1,6 @@
 # CommonMarker
 
-![Crystal CI](https://github.com/mamantoha/crystal-cmark-gfm/workflows/Crystal%20CI/badge.svg)
+[![Crystal CI](https://github.com/mamantoha/crystal-cmark-gfm/actions/workflows/crystal.yml/badge.svg)](https://github.com/mamantoha/crystal-cmark-gfm/actions/workflows/crystal.yml)
 [![GitHub release](https://img.shields.io/github/release/mamantoha/crystal-cmark-gfm.svg)](https://github.com/mamantoha/crystal-cmark-gfm/releases)
 [![License](https://img.shields.io/github/license/mamantoha/crystal-cmark-gfm.svg)](https://github.com/mamantoha/crystal-cmark-gfm/blob/master/LICENSE)
 
