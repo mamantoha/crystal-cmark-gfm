@@ -31,5 +31,48 @@ describe CommonMarker do
       html = md.to_html
       html.should eq("<p><em>Hello</em> <strong>world</strong></p>\n")
     end
+
+    it "should parse markdown tables" do
+      text = <<-TXT
+        | Month    | Savings |
+        | -------- | ------- |
+        | January  | $250    |
+        | February | $80     |
+        | March    | $420    |
+        TXT
+
+      markdown = <<-TXT
+        <table>
+        <thead>
+        <tr>
+        <th>Month</th>
+        <th>Savings</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>January</td>
+        <td>$250</td>
+        </tr>
+        <tr>
+        <td>February</td>
+        <td>$80</td>
+        </tr>
+        <tr>
+        <td>March</td>
+        <td>$420</td>
+        </tr>
+        </tbody>
+        </table>
+
+        TXT
+
+      extensions = ["table", "strikethrough", "autolink", "tagfilter", "tasklist"]
+      options = ["unsafe"]
+      md = CommonMarker.new(text, options: options, extensions: extensions)
+      html = md.to_html
+
+      html.should eq(markdown)
+    end
   end
 end
