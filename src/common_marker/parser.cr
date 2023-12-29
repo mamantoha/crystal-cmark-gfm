@@ -14,7 +14,7 @@ class Parser
   end
 
   # Returns a list containing the extensions of the current parser.
-  def get_extensions
+  def extensions
     LibCmark.cmark_parser_get_syntax_extensions(parser)
   end
 

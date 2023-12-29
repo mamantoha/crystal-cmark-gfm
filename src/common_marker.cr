@@ -17,7 +17,7 @@ class CommonMarker
 
   # Parses a Markdown string into an HTML string.
   def to_html : String
-    extensions = parser.get_extensions
+    extensions = parser.extensions
 
     parser.parse!(text)
 
